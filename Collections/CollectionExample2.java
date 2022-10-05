@@ -5,6 +5,34 @@ class Container<T>
 {
     T value;
 
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public void show()
+    {
+        System.out.println(value.getClass().getName());
+        System.out.println(value);
+    }
+}
+
+class NumberContainer<T extends Number>{
+    // This container can only have Number type values, like Integer, Float, Double, etc.
+
+    T value;
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
     public void show()
     {
         System.out.println(value.getClass().getName());
@@ -24,5 +52,11 @@ public class CollectionExample2
         Container<String> str = new Container<>();
         str.value = "Hello";
         str.show();
+
+        NumberContainer<Float> num2 = new NumberContainer<>();
+        num2.value = 2.5F;
+        num2.show();
+
+
     }
 }
