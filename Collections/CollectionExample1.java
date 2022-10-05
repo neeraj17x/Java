@@ -1,0 +1,46 @@
+// package Collections;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class CollectionExample1
+{
+    public static void main(String args[])
+    {
+        System.out.println("Java Collections");
+
+        Collection values = new ArrayList();//Raw/generic collection type, can contain any type of values
+        // values.add(123);s
+        // values.add("Hello");
+
+
+        Collection<Integer> numbers = new ArrayList<>();//Cannot use index on Collection
+        numbers.add(36);
+        numbers.add(8888);
+
+
+        // interface List extends Collection{}
+        // List can have duplicate values
+        // Traverisng the elements is done in a fixed sequence
+        List list = new ArrayList();
+        List<Integer> numbers2 = new ArrayList<>();
+
+
+        // interface Set extends Collection{}
+        // Set cannot have duplicate values
+        // Traverisng the elements is done in  random order
+        // Set set = new HashSet();
+        Set<Integer> numbers3 = new HashSet<>();
+        Set<Integer> numbers4 = new TreeSet<>();//It will return elements in a sorted format
+
+
+        Map genericMap = new HashMap();
+        Map<String, String> map = new HashMap<>();
+    }
+}
