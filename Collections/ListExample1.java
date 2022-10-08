@@ -34,6 +34,6 @@ public class ListExample1 {
 
         System.out.println("\nUsing forEach");
         // Another method of iteration >> Stream API which uses Lambda expression (Introduced in Java 1.8)
-        list.forEach(System.out::println);
+        list.forEach(System.out::println);//Passing a function in a function (Method Reference)
     }
 }

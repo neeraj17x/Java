@@ -8,12 +8,17 @@ public class Java8Example1 {
      * 2. Lambda Expression
      * 3. Stream API
      * 
-     * 4. We can define methods in an interface
+     * 4. We can define methods in an interface (default and static methods)
      */
 
      public static void main(String args[])
      {
         System.out.println("Java 8 Features");
+        Java8Feature1C obj = new Java8Feature1C();
+        int sum = obj.add(26, 39);
+        System.out.println("Sum = "+ sum);
+        obj.show();
+        // obj.display();
      }
 }
 
