@@ -22,7 +22,7 @@ public class CollectionExample3
          * 1. By using Iterator interface
          * 2. By enhanced for loop
          */
-        Iterator iterator = values.iterator();//It is avery old technique
+        Iterator iterator = values.iterator();//It is a very old technique
         // System.out.println(iterator.next());
         // System.out.println(iterator.next());
         // System.out.println(iterator.next());

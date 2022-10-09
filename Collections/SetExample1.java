@@ -4,6 +4,7 @@ import java.util.TreeSet;
 
 public class SetExample1 {
     public static void main(String[] args) {
+        // TreeSet print the set in a UNORDERED way
         Set<Integer> set =  new HashSet<>();
         set.add(47);
         set.add(90);
@@ -18,7 +19,7 @@ public class SetExample1 {
             System.out.println("\n90 already exists in Set");
         }
 
-        // TrreSet print the set in a ORDERED way
+        // TreeSet print the set in a ORDERED way
         Set<Integer> treeSet =  new TreeSet<>();
         treeSet.add(53);
         treeSet.add(13);
