@@ -21,6 +21,7 @@ public class ListExample1 {
 
         System.out.println("\n");
         Collections.sort(list);
+        Collections.reverse(list);
         for(String str: list) {
             System.out.println(str);
         }
