@@ -13,6 +13,7 @@ public class Java8Example2 {
        System.out.println("Java 8 Features");
        Phone phone = new Nokia();
        phone.call();
+       phone.message();     // Default Method
     }
 }
 
