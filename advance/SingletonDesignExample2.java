@@ -19,6 +19,7 @@ public class SingletonDesignExample2 {
 }
 
 
+//  Thread safe >> synchronized
 class Singleton {
 
     private int res;
