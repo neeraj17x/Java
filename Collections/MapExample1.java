@@ -9,6 +9,7 @@ public class MapExample1 {
         map.put("name", "Neeraj");
         map.put("city", "Patna");
         map.put("year", "2022");
+        // map.put("year", "2025"); //overwrite
 
         System.out.println(map);
         System.out.println("Name = "+ map.get("name"));
@@ -21,6 +22,7 @@ public class MapExample1 {
         // for(String value : map) {
         // }
 
+        // Hashtable is ordered 
         Map<String, String> mapTable = new Hashtable<>();//ORDERED 
         mapTable.put("element", "Nickel");
         mapTable.put("symbol", "Ni");
