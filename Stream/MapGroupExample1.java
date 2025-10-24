@@ -88,6 +88,14 @@ public class MapGroupExample1 {
             });
         });
         System.out.println("------------------------------------------");
+
+        // Get students with max age
+        Student oldestStudent = students.stream().max((s1, s2) -> Integer.compare(s1.getAge(), s2.getAge())).get();
+        System.out.println("Oldest Student: " + oldestStudent);
+
+        List<Student> oldestStudents = students.stream().filter(s -> s.getAge() == oldestStudent.getAge()).collect(Collectors.toList());
+        System.out.println("Oldest Students: " + oldestStudents);
+
     }
 
 }
