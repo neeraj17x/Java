@@ -96,6 +96,17 @@ public class MapGroupExample1 {
         List<Student> oldestStudents = students.stream().filter(s -> s.getAge() == oldestStudent.getAge()).collect(Collectors.toList());
         System.out.println("Oldest Students: " + oldestStudents);
 
+        List<Student> adultStudents = students.stream().filter(s -> s.getAge() >= 21).toList();
+        System.out.println("Adult Students: " + adultStudents);
+
+        // get only names
+        List<String> adultStudentNames = adultStudents.stream().map(Student::getName).toList();
+        System.out.println("Adult Student Names: " + adultStudentNames);
+
+        Map<String, String> emailMap = students.stream().collect(Collectors.toMap(Student::getName, Student::getEmail));
+        System.out.println("Email Map: " + emailMap);
+
+
     }
 
 }
