@@ -9,8 +9,7 @@ public class FrequencyOfElements {
     public static void main(String[] args) {
         List<String> names = List.of("Alice", "Bob", "Charlie", "Alice", "David", "Bob", "Alice");
 
-        Map<String, Long> frequencyMap = names.stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> frequencyMap = names.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         System.out.println("Frequency of elements: " + frequencyMap);
 
