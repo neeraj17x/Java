@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.Comparator;
+import java.util.Optional;
 
 
 
@@ -72,6 +74,7 @@ public class MapGroupExample1 {
 
         // Group by city
         Map<String, List<Student>> groupedStudents = students.stream().collect(Collectors.groupingBy(Student::getCity));
+        // System.out.println(groupedStudents);
         groupedStudents.forEach((city, studentsInCity) -> {
             System.out.println(city + "  Students ----------------:");
             studentsInCity.forEach(student -> {
@@ -91,11 +94,19 @@ public class MapGroupExample1 {
 
         // Get students with max age
         Student oldestStudent = students.stream().max((s1, s2) -> Integer.compare(s1.getAge(), s2.getAge())).get();
-        System.out.println("Oldest Student: " + oldestStudent);
+        // System.out.println("Oldest Student: " + oldestStudent);
 
         List<Student> oldestStudents = students.stream().filter(s -> s.getAge() == oldestStudent.getAge()).collect(Collectors.toList());
         System.out.println("Oldest Students: " + oldestStudents);
 
+        Map<String, Optional<Student>> oldestStudentInEachCity = students.stream().collect(Collectors.groupingBy(Student::getCity, Collectors.maxBy(Comparator.comparingInt(Student::getAge))));
+        System.out.println("Oldest Student in each city: ");
+        oldestStudentInEachCity.forEach((city, studentInCity) -> {
+            System.out.println(city + " : " + " >> " + studentInCity.get());
+        });
+        System.out.println("------------------------------------------");
+
+        // Get students with age >= 21
         List<Student> adultStudents = students.stream().filter(s -> s.getAge() >= 21).toList();
         System.out.println("Adult Students: " + adultStudents);
 
@@ -103,8 +114,13 @@ public class MapGroupExample1 {
         List<String> adultStudentNames = adultStudents.stream().map(Student::getName).toList();
         System.out.println("Adult Student Names: " + adultStudentNames);
 
+        // Name => Email
         Map<String, String> emailMap = students.stream().collect(Collectors.toMap(Student::getName, Student::getEmail));
-        System.out.println("Email Map: " + emailMap);
+        // System.out.println("Email Map: " + emailMap);
+        System.out.println("Name => Email: ------------------");
+        emailMap.forEach((email, name) -> {
+            System.out.println(email + " => " + name);
+        });
 
 
     }
