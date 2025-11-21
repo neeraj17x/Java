@@ -9,11 +9,13 @@ public class SetExample1 {
         set.add(47);
         set.add(90);
         set.add(23);
-        set.forEach(System.out::println);
+        // set.forEach(System.out::println);
+        System.out.println(set);
 
         System.out.println("\n");
         set.add(47);//Duplicate elements will be considered as single element (Same as Set Theory in Mathematics)
-        set.forEach(System.out::println);
+        // set.forEach(System.out::println);
+        System.out.println(set);
 
         if(!set.add(90)) {
             System.out.println("\n90 already exists in Set");
@@ -25,7 +27,8 @@ public class SetExample1 {
         treeSet.add(13);
         treeSet.add(89);
         treeSet.add(41);
-        System.out.println("\n");
-        treeSet.forEach(System.out::println);
+        System.out.println("Tree Set :");
+        // treeSet.forEach(System.out::println);
+        System.out.println(treeSet);
     }
 }

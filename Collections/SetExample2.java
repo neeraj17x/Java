@@ -1,12 +1,13 @@
 // package collections;
 
+import java.util.Set;
 import java.util.HashSet;
 
-public class HashSet1
+public class SetExample2
 {
     public static void main(String[] args)
     {
-        HashSet<String> name =  new HashSet<String>();
+        Set<String> name =  new HashSet<String>();
         name.add("Neeraj");
         name.add("Anjani");
         name.add("Sonu");
