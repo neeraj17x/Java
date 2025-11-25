@@ -8,6 +8,9 @@ public class CollectionsUtility1 {
     public static void main(String[] args) {
         List<Integer> nums  = new ArrayList<>(List.of(17,12,8,19,23,99,62,11));
 
+        // Size of ArrayList
+        System.out.println(nums.size());
+
         // Sort
         // Collections.sort(nums);
         Collections.sort(nums, Comparator.reverseOrder());
